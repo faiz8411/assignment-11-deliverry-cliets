@@ -1,0 +1,42 @@
+const images =https://i.ibb.co/yhDTcff/international-bulk-air-cargo-service-500x500.jpg
+
+
+description:"Bulk cargo is a shipping term for items that are shipped loosely and unpackaged as opposed to being shipped in packages or containers. An item may be classified as bulk cargo if it is not containerized and easily secured on a vessel. Items such as oil, grain, or coal are all examples of bulk cargo."
+
+
+service name:bulk shipment
+
+service img=https://i.ibb.co/GMW7nYX/load-unload.jpg
+name = load unload
+description:Industry-wise loading-unloading facilities at factories, projects and ports
+
+service images=https://i.ibb.co/F7K6SSP/truck-2.jpg
+servicename: rent truck
+description:Open trucks and covered vans anytime anywhere in the country
+
+service images:https://i.ibb.co/fnpjYgs/Warehouse.jpg
+name:Warehouse
+description:Complete solution for storage, sorting and processing
+
+name:Logistics services
+imag:https://i.ibb.co/8MycMms/logistics-service.jpg
+description:The help of an experienced team to solve any problem related to logistics
+
+name:castomer care 
+img:https://i.ibb.co/3RSxTqP/customer-care-support-services-500x500-1.jpg
+des:Customized solutions that understand your business type needs
+
+
+name persel delivery
+img:https://i.ibb.co/23cGRYW/oarsel.jpg
+description:First-Mile Pickup and Last Mile Delivery Services for Private, Small Business and Corporate
+
+
+
+
+
+
+
+
+
+
