@@ -20,7 +20,7 @@ const Popular = () => {
 
                 </Card>
                 <Card>
-                    <Card.Img variant="top" className="images" src="https://i.ibb.co/tMz7r0C/doorstep-pickup-delivery-svg.jpg" />
+                    <Card.Img variant="top" className="images-width" src="https://i.ibb.co/tMz7r0C/doorstep-pickup-delivery-svg.jpg" />
                     <Card.Body>
                         <Card.Title>Doorstep pickup and delivery</Card.Title>
                         <Card.Text>

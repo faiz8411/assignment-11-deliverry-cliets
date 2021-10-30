@@ -1,46 +1,38 @@
 import React from 'react';
+import { Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import "./Footer.css"
 
 const Footer = () => {
+
+
     return (
-
-        <div className="footer">
+        <div className="footer-container">
             <div className="container">
-                <div className="row">
-                    <div className="footer-col">
-                        <h4>company</h4>
-                        <ul>
-                            <li><a href="">Home</a></li>
-                            <li><a href="">our service</a></li>
-                            <li><a href="">privacy policy</a></li>
-                            <li><a href="">about us</a></li>
-
-                        </ul>
+                <div className="row d-flex justify-content-between">
+                    <div className="col-md-4">
+                        <Nav.Link as={HashLink} to="/home" className="text-white">home</Nav.Link>
+                        <Nav.Link as={HashLink} to="/home" className="text-white">home</Nav.Link>
+                        <Nav.Link as={HashLink} to="/home" className="text-white">home</Nav.Link>
+                        <Nav.Link as={HashLink} to="/home" className="text-white">home</Nav.Link>
+                        {/* < Nav.Link as={HashLink} to="/home" className="text-white navbar">Home</Nav.Link>
+                        <Nav.Link as={HashLink} to="/service" className="text-white navbar">Services</Nav.Link>
+                        <Nav.Link as={HashLink} to="/catagory" className="text-white navbar">Catagory</Nav.Link> */}
                     </div>
-                    <div className="footer-col">
-                        <h4>company</h4>
-                        <ul>
-                            <li><a href="">Home</a></li>
-                            <li><a href="">our service</a></li>
-                            <li><a href="">privacy policy</a></li>
-                            <li><a href="">about us</a></li>
-
-                        </ul>
+                    <div className="col-md-4">
+                        <h5>delivery solution</h5>
+                        <input type="text" placeholder="" />
+                        <h5 className="text-white">mobile</h5>
+                        <h5>email</h5>
                     </div>
 
-                    <div className="footer-col">
-                        <h4>FOLLOW US</h4>
-                        <ul>
-                            <li><a href="">FAQ</a></li>
-                            <li><a href="">Shipping</a></li>
-                            <li><a href="">Returns</a></li>
-                            <li><a href="">Order Status</a></li>
-
-                        </ul>
-                    </div>
                 </div>
             </div>
-        </div>
+
+        </div >
+
+
 
     );
 };

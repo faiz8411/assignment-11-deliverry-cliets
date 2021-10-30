@@ -11,7 +11,7 @@ const Banner = () => {
 
                 <div className="banner-text">
                     <div className="">
-                        <h2 className="text">Delivery Solution logistics services cover <br /> 64 districts and 493 <br /> upazilas across the country</h2>
+                        <h2 className="text">Delivery Solution LTD <br /> logistics services cover <br /> 64 districts and 493 <br /> upazilas across the country</h2>
                         <p className="text-p">We guarantee the fastest service nationwide for any of your logistics needs</p>
                         <button className="btn btn-success">see coverage area</button>
                     </div>
