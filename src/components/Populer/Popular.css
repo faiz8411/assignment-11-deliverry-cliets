@@ -1,0 +1,11 @@
+.images{
+
+
+    width: 200px;
+    height: 200px;
+}
+
+.container-popular{
+    background-color: rgb(227, 247, 157);
+    max-resolution: 10px;
+}

@@ -1,0 +1,9 @@
+form{
+    border: 1px solid gray;
+    /* background-color: rgb(34, 17, 26); */
+    border-radius: 10px;
+}
+
+form input{
+    font-weight: 600;
+}
