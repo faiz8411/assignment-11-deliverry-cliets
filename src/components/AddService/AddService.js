@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import './AddService'
 
 const AddService = () => {
     const {
@@ -25,8 +26,8 @@ const AddService = () => {
 
     return (
         <div>
-            <h1 className="mt-5 text-center text-info">Please Add Events</h1>
-            <div className="login-box w-25 m-auto mt-5">
+            <h1 className="mt-5 text-center text-info">service added</h1>
+            <div className="">
                 <div className="event-box border border d-flex justify-content-center align-items-center">
                     <div className="login-form">
                         <form onSubmit={handleSubmit(onSubmit)}>

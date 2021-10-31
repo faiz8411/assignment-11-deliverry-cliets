@@ -10,7 +10,7 @@ const Popular = () => {
             <h2>OUR POPULER SERVICE BY OFFERD</h2>
             <CardGroup className="container-popular">
                 <Card>
-                    <Card.Img variant="top" className="images" src="https://i.ibb.co/T25sMmr/best-cod-rates-svg.jpg" />
+                    <Card.Img variant="top" className="images-width" src="https://i.ibb.co/T25sMmr/best-cod-rates-svg.jpg" />
                     <Card.Body>
                         <Card.Title>Best Cash On Delivery Rate</Card.Title>
                         <Card.Text>
@@ -30,7 +30,7 @@ const Popular = () => {
 
                 </Card>
                 <Card>
-                    <Card.Img variant="top" className="images" src="https://i.ibb.co/zG14hJp/fastest-delivery-svg.jpg" />
+                    <Card.Img variant="top" className="images-width" src="https://i.ibb.co/zG14hJp/fastest-delivery-svg.jpg" />
                     <Card.Body>
                         <Card.Title>Delivery guaranteed in 3 days</Card.Title>
                         <Card.Text>
@@ -42,7 +42,7 @@ const Popular = () => {
             </CardGroup>
             <CardGroup>
                 <Card>
-                    <Card.Img variant="top" className="images" src="https://i.ibb.co/fkjqLmZ/next-day-payment-svg.jpg" />
+                    <Card.Img variant="top" className="images-width" src="https://i.ibb.co/fkjqLmZ/next-day-payment-svg.jpg" />
                     <Card.Body>
                         <Card.Title>Payment the next day</Card.Title>
                         <Card.Text>
@@ -52,7 +52,7 @@ const Popular = () => {
 
                 </Card>
                 <Card>
-                    <Card.Img variant="top" className="images" src="https://i.ibb.co/mbMRBwV/secure-handling-svg.jpg" />
+                    <Card.Img variant="top" className="images-width" src="https://i.ibb.co/mbMRBwV/secure-handling-svg.jpg" />
                     <Card.Body>
                         <Card.Title>Secure handling</Card.Title>
                         <Card.Text>
@@ -62,7 +62,7 @@ const Popular = () => {
 
                 </Card>
                 <Card>
-                    <Card.Img variant="top" className="images" src="https://i.ibb.co/7SdqZph/sms-update-svg-1.jpg" />
+                    <Card.Img variant="top" className="images-width" src="https://i.ibb.co/7SdqZph/sms-update-svg-1.jpg" />
                     <Card.Body>
                         <Card.Title>SMS update </Card.Title>
                         <Card.Text>

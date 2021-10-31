@@ -1,15 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+
 import Login from './components/Login/Login';
 import AddService from './components/AddService/AddService';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import MyOrder from './components/MyOrder/MyOrder';
+import Footer from './components/Footer/Footer';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -27,17 +28,18 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/myorder">
-              <MyOrder></MyOrder>
-            </Route>
+
             <Route path="/addservice">
               <AddService></AddService>
             </Route>
             <PrivateRoute path="/details/:serviceId">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
-            <Route path="/myorder">
+            <Route path="/booking/:id">
               <MyOrder></MyOrder>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer></Footer>

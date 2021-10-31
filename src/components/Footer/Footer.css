@@ -1,9 +1,4 @@
-.footer-container{
-    background-color: rgb(8, 4, 10);
-}
-
-.row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container{
+    width: 100%;
+    
 }

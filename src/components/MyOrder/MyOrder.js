@@ -6,22 +6,39 @@ import useAuth from '../../hooks/useAuth';
 
 const MyOrder = () => {
     const { user } = useAuth()
-    const [orders, setOrders] = useState({})
-    const { serviceId } = useParams()
+
+    const [orders, setOrders] = useState([])
+    const { id } = useParams()
     // const email = user?.email;
     useEffect(() => {
-        fetch(`http://localhost:5000/single/${serviceId}`)
-            .then(res => res.json())
-            .then(data => setOrders(data))
-    }, [])
+        fetch(`http://localhost:5000/booking/${id}`)
+            .then((res) => res.json())
+            .then((data) => {
+
+                setOrders(data)
+            });
+        // const allOrder = orders.find(pd => pd.id === serviceId)
+        // console.log(allOrder)
+
+    }, [id])
+    console.log(orders)
+
     return (
         <div>
-
-            <h4>this is my order {orders.title
-            }</h4>
-            <small>{serviceId}</small>
             <div>
-                <img src={orders.title} alt="" />
+
+                <h2>this is upadte</h2>
+                <h2>{orders.firstName}</h2>
+                {
+                    orders?.map(order => {
+                        <h1>{order?.title}</h1>
+
+                    })
+                }
+                <h2>my order here</h2>
+
+
+
             </div>
         </div>
     );
