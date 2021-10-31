@@ -21,7 +21,7 @@ const ServiceDetails = () => {
     } = useForm();
     const onSubmit = (data) => {
         data.status = "pending"
-        fetch("http://localhost:5000/addMyOrder", {
+        fetch("https://fast-eyrie-50144.herokuapp.com/addMyOrder", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -44,7 +44,7 @@ const ServiceDetails = () => {
     }, [serviceId])
     const handleDelete = (id) => {
 
-        fetch(`http://localhost:5000/deleteService/${id}`, {
+        fetch(`https://fast-eyrie-50144.herokuapp.com/deleteService/${id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json'

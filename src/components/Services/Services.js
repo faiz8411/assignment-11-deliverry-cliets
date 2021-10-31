@@ -6,7 +6,7 @@ const Services = () => {
 
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://fast-eyrie-50144.herokuapp.com/services')
             .then((res) => res.json())
             .then((result) => setServices(result));
 
@@ -16,7 +16,7 @@ const Services = () => {
         <div>
             <div className="service-container">
 
-                <h1>services {services.length}</h1>
+                <h1>our main service</h1>
 
                 <div className="row container text-center">
                     {services?.map((service, index) => (
