@@ -16,3 +16,17 @@
     color: maroon;
     font-weight: bold;
 }
+@media only  screen and  (max-width:991px){
+    .banner-container{
+        padding: 10px 20px;
+        flex-direction: column;
+
+    }
+}
+@media only  screen and  (max-width:688px){
+    .banner-container{
+        padding: 10px 20px;
+        flex-direction: column;
+
+    }
+}

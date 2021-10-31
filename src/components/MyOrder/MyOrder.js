@@ -1,45 +1,53 @@
 import React, { useEffect, useState } from 'react';
 
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 
 const MyOrder = () => {
     const { user } = useAuth()
 
-    const [orders, setOrders] = useState([])
+    const [myOrder, setMyOrder] = useState()
     const { id } = useParams()
     // const email = user?.email;
     useEffect(() => {
-        fetch(`http://localhost:5000/booking/${id}`)
+        fetch('http://localhost:5000/myorder')
             .then((res) => res.json())
             .then((data) => {
 
-                setOrders(data)
+                setMyOrder(data)
             });
         // const allOrder = orders.find(pd => pd.id === serviceId)
         // console.log(allOrder)
 
-    }, [id])
-    console.log(orders)
+    }, [])
+    console.log(setMyOrder)
 
     return (
         <div>
-            <div>
+            <div className="row container text-center">
+                {myOrder?.map((service, index) => (
+                    <div className="col-md-4">
+                        <div className="event border border">
 
-                <h2>this is upadte</h2>
-                <h2>{orders.firstName}</h2>
-                {
-                    orders?.map(order => {
-                        <h1>{order?.title}</h1>
+                            <div
 
-                    })
-                }
-                <h2>my order here</h2>
+                            >
+                                <h4>{myOrder.title}</h4>
+                                {/* <h5>{pd.description
+                                    }</h5> */}
+                                <button>done</button>
 
 
+                                {/* /* <Link to={`/details/${service._id}`}><button>Add To My cart</button></Link> */}
 
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
+
         </div>
     );
 };

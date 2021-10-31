@@ -2,3 +2,18 @@
 display: grid;
 grid-template-columns: repeat(3,1fr);
 }
+
+/* make responsive */
+
+@media only  screen and  (max-width:991px){
+    .service-container{
+        grid-template-columns: repeat(2,1fr);
+
+    }
+}
+@media only  screen and  (max-width:688px){
+    .service-container{
+       grid-template-columns: repeat(1,1fr);
+
+    }
+}

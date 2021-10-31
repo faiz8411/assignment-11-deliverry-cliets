@@ -38,6 +38,9 @@ function App() {
             <Route path="/booking/:id">
               <MyOrder></MyOrder>
             </Route>
+            <Route path="/myorder">
+              <MyOrder></MyOrder>
+            </Route>
             <Route path="*">
               <NotFound></NotFound>
             </Route>

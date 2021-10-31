@@ -14,12 +14,12 @@ const Services = () => {
     }, [])
     return (
         <div>
-            <div>
+            <div className="service-container">
 
                 <h1>services {services.length}</h1>
 
                 <div className="row container text-center">
-                    {services.map((service, index) => (
+                    {services?.map((service, index) => (
                         <div className="col-md-4">
                             <div className="event border border">
                                 <div className="event-img">
@@ -33,7 +33,7 @@ const Services = () => {
                                     <h4>{service.title}</h4>
                                     {/* <h5>{pd.description
                                     }</h5> */}
-                                    <Link to={`/details/${service._id}`}><button>details</button></Link>
+                                    <Link to={`/details/${service._id}`}><button className="btn btn-success">Booking</button></Link>
 
 
                                     {/* /* <Link to={`/details/${service._id}`}><button>Add To My cart</button></Link> */}

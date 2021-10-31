@@ -52,7 +52,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="mt-2">
-                <h5>© 2020 TravRio. Designd By naz. All Rights Reserved</h5>
+                <h5>© 2020 DSL. Designd By DSL. All Rights Reserved</h5>
             </div>
         </div>
     );
