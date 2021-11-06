@@ -35,10 +35,8 @@ function App() {
             <PrivateRoute path="/details/:serviceId">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
-            <Route path="/booking/:id">
-              <MyOrder></MyOrder>
-            </Route>
-            <Route path="/myorder">
+
+            <Route path="/myOrder">
               <MyOrder></MyOrder>
             </Route>
             <Route path="*">

@@ -8,46 +8,60 @@ import useAuth from '../../hooks/useAuth';
 const MyOrder = () => {
     const { user } = useAuth()
 
-    const [myOrder, setMyOrder] = useState()
-    const { id } = useParams()
-    // const email = user?.email;
+
+    const email = sessionStorage.getItem("email")
+
+    const [services, setServices] = useState([]);
+
+    const [control, setControl] = useState(false);
+
     useEffect(() => {
-        fetch('http://localhost:5000/myorder')
+        fetch(`http://localhost:5000/myOrders?email=${user.email}`)
+            .then((res) => res.json())
+            .then((data) => setServices(data));
+    }, [control]);
+    const handleDelete = (id) => {
+        fetch(`http://localhost:5000/deleteOrder/${id}`, {
+            method: "DELETE",
+        })
             .then((res) => res.json())
             .then((data) => {
-
-                setMyOrder(data)
+                if (data.deletedCount) {
+                    setControl(!control);
+                }
             });
-        // const allOrder = orders.find(pd => pd.id === serviceId)
-        // console.log(allOrder)
-
-    }, [])
-    console.log(setMyOrder)
+        console.log(id);
+    };
 
     return (
         <div>
-            <div className="row container text-center">
-                {myOrder?.map((service, index) => (
-                    <div className="col-md-4">
-                        <div className="event border border">
+            <h1>My orders </h1>
 
-                            <div
+            <div className="services">
+                <div className="row container">
+                    {services?.map((pd) => (
+                        <div className="col-md-4">
+                            <div className="service border border p-3">
+                                <div className="services-img ">
+                                    <img className="w-100" src={pd?.image} alt="" />
+                                </div>
 
-                            >
-                                <h4>{myOrder.title}</h4>
-                                {/* <h5>{pd.description
-                                    }</h5> */}
-                                <button>done</button>
+                                <h6>{pd?.name}</h6>
+                                <h4>{pd?.model}</h4>
+                                <p>{pd?.description}</p>
+                                <h3 className="text-danger"> Cost :{pd?.price}$</h3>
 
-
-                                {/* /* <Link to={`/details/${service._id}`}><button>Add To My cart</button></Link> */}
-
+                                <button
+                                    onClick={() => handleDelete(pd?._id)}
+                                    className="btn btn-danger"
+                                >
+                                    Cancel
+                                </button>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-
         </div>
     );
 };
