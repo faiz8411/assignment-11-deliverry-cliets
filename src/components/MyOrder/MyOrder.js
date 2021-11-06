@@ -9,7 +9,7 @@ const MyOrder = () => {
     const { user } = useAuth()
 
 
-    const email = sessionStorage.getItem("email")
+    // const email = sessionStorage.getItem("email")
 
     const [services, setServices] = useState([]);
 
@@ -21,6 +21,7 @@ const MyOrder = () => {
             .then((data) => setServices(data));
     }, [control]);
     const handleDelete = (id) => {
+        alert('you want to delete')
         fetch(`http://localhost:5000/deleteOrder/${id}`, {
             method: "DELETE",
         })
