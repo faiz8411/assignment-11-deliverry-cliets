@@ -11,14 +11,14 @@ const MyOrder = () => {
 
     // const email = sessionStorage.getItem("email")
 
-    const [services, setServices] = useState([]);
+    const [orders, setOrders] = useState([]);
 
     const [control, setControl] = useState(false);
 
     useEffect(() => {
         fetch(`https://fast-eyrie-50144.herokuapp.com/myOrders?email=${user.email}`)
             .then((res) => res.json())
-            .then((data) => setServices(data));
+            .then((data) => setOrders(data));
     }, [control]);
     const handleDelete = (id) => {
         alert('you want to delete')
@@ -40,7 +40,7 @@ const MyOrder = () => {
 
             <div className="services">
                 <div className="row container">
-                    {services?.map((pd) => (
+                    {orders?.map((pd) => (
                         <div className="col-md-4">
                             <div className="service border border p-3">
                                 <div className="services-img ">

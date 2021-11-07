@@ -72,14 +72,16 @@ const ServiceDetails = () => {
                         <h2>{details?.name}</h2>
                         <p className="text-start">{details?.description}</p>
                         <h1> price: {details?.price} $</h1>
-                        <h1 className="text-danger"> price: {details?.model}</h1>
+
                     </div>
                     <div className="col-md-6">
                         <h1>booking Form</h1>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input
                                 {...register("name")}
-                                defaultValue={details?.name}
+                                placeholder="write service name"
+                                // defaultValue={details?.name}
+                                required
                                 className="p-2 m-2 w-100"
                             />
                             <input
