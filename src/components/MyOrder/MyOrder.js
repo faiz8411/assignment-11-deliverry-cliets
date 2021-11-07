@@ -9,7 +9,7 @@ const MyOrder = () => {
     const { user } = useAuth()
 
 
-    // const email = sessionStorage.getItem("email")
+
 
     const [orders, setOrders] = useState([]);
 

@@ -37,7 +37,7 @@ const AddService = () => {
                                 <br />
                                 <input
                                     {...register("date")}
-                                    // placeholder="Name"
+
                                     type="date"
                                     className="p-2 m-2 w-100"
                                 />

@@ -44,20 +44,7 @@ const ServiceDetails = () => {
             .then(res => res.json())
             .then(data => setDetails(data))
     }, [serviceId])
-    // const handleDelete = (id) => {
 
-    //     fetch(`https://fast-eyrie-50144.herokuapp.com/deleteService/${id}`, {
-    //         method: 'DELETE',
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         }
-    //     })
-    //         .then(res => res.json())
-    //         .then(result => console.log(result))
-    //     alert('are you want to delete')
-    //     console.log(id)
-
-    // }
 
     return (
         <div>
@@ -80,7 +67,9 @@ const ServiceDetails = () => {
                             <input
                                 {...register("name")}
                                 placeholder="write service name"
+
                                 // defaultValue={details?.name}
+
                                 required
                                 className="p-2 m-2 w-100"
                             />
