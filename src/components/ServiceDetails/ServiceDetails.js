@@ -21,8 +21,9 @@ const ServiceDetails = () => {
         formState: { errors },
     } = useForm();
     const onSubmit = (data) => {
+        alert('your order successfully added in my order')
         data.status = "pending"
-        fetch("http://localhost:5000/myOrders", {
+        fetch("https://fast-eyrie-50144.herokuapp.com/myOrders", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -30,14 +31,6 @@ const ServiceDetails = () => {
             .then((res) => res.json())
             .then((result) => console.log(result));
         console.log(data);
-        // fetch("https://fast-eyrie-50144.herokuapp.com/addMyOrder", {
-        //     method: "POST",
-        //     headers: { "content-type": "application/json" },
-        //     body: JSON.stringify(data),
-        // })
-        //     .then((res) => res.json())
-        //     .then((result) => console.log(result));
-        // alert('product added in my order')
 
         reset()
 

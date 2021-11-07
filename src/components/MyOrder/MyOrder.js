@@ -16,13 +16,13 @@ const MyOrder = () => {
     const [control, setControl] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrders?email=${user.email}`)
+        fetch(`https://fast-eyrie-50144.herokuapp.com/myOrders?email=${user.email}`)
             .then((res) => res.json())
             .then((data) => setServices(data));
     }, [control]);
     const handleDelete = (id) => {
         alert('you want to delete')
-        fetch(`http://localhost:5000/deleteOrder/${id}`, {
+        fetch(`https://fast-eyrie-50144.herokuapp.com/deleteOrder/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())

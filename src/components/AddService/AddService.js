@@ -11,7 +11,7 @@ const AddService = () => {
         formState: { errors },
     } = useForm();
     const onSubmit = (data) => {
-        fetch("http://localhost:5000/addServices", {
+        fetch("https://fast-eyrie-50144.herokuapp.com/addServices", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -19,6 +19,7 @@ const AddService = () => {
             .then((res) => res.json())
             .then((result) => console.log(result));
         console.log(data);
+        reset()
     };
     return (
         <div>

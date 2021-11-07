@@ -12,6 +12,7 @@ import MyOrder from './components/MyOrder/MyOrder';
 import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
 import Admin from './components/Admin/Admin';
+import Services from './components/Services/Services';
 
 function App() {
   return (
@@ -29,16 +30,18 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-
+            <Route path="/services">
+              <Services></Services>
+            </Route>
             <Route path="/addservice">
               <AddService></AddService>
             </Route>
             <PrivateRoute path="/details/:serviceId">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
-            <Route path="/admin">
+            <PrivateRoute exact path="/admin">
               <Admin></Admin>
-            </Route>
+            </PrivateRoute>
             <Route path="/myOrder">
               <MyOrder></MyOrder>
             </Route>

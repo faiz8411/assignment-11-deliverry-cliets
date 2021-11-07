@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AddService from '../AddService/AddService';
+import ManageOrders from '../ManageOrders/ManageOrders';
 import Services from '../Services/Services';
 import './Admin.css'
 
@@ -13,12 +14,7 @@ const Admin = () => {
                     <div className="row">
                         <div className="col-md-4 dasborad">
                             <h3>DSL LTD dashboard</h3>
-                            <li
-                                onClick={() => setControl("addServices")}
-                                className="admin-menu p-2"
-                            >
-                                Add Services
-                            </li>
+
 
                             <li
                                 onClick={() => setControl("services")}
@@ -32,6 +28,12 @@ const Admin = () => {
                             >
                                 Manage Orders
                             </li>
+                            <li
+                                onClick={() => setControl("addServices")}
+                                className="admin-menu p-2"
+                            >
+                                Add Services
+                            </li>
 
 
                         </div>
@@ -40,7 +42,7 @@ const Admin = () => {
                                 <h1>see your productivity</h1>
 
                                 {control === "services" && <Services></Services>}
-                                {/* {control === "MangeOrder" && <MangeOrder></MangeOrder>} */}
+                                {control === "MangeOrder" && <ManageOrders></ManageOrders>}
                                 {control === "addServices" && <AddService></AddService>}
                             </div>
                         </div>

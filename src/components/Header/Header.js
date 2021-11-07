@@ -16,11 +16,11 @@ const Header = () => {
             </div>
             <div className="hedar-navigation">
                 <Nav.Link as={HashLink} to="/home" className="text-white navbar">Home</Nav.Link>
-                <Nav.Link as={HashLink} to="/service" className="text-white navbar">Services</Nav.Link>
-
+                <Nav.Link as={HashLink} to="/services" className="text-white navbar">Services</Nav.Link>
+                {user?.email && <Nav.Link as={HashLink} to="/admin" className="text-white navbar">Admin</Nav.Link>}
                 {user.email ?
 
-                    <Nav.Link as={HashLink} to="/a" className="text-white navbar">Admin</Nav.Link> &&
+
                     <Nav.Link as={HashLink} to="/myorder" className="text-white navbar">MyOrder</Nav.Link> :
                     <Nav.Link as={HashLink} to="/about" className="text-white navbar">About</Nav.Link>}
 
