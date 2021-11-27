@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Card, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Service from '../service/Service';
 import './Services.css'
 
 const Services = () => {
@@ -14,27 +16,25 @@ const Services = () => {
     }, [])
     return (
         <div>
-            <h1>Services</h1>
-            <div className="services">
-                <div className="row container">
-                    {services?.map((pd, index) => (
-                        <div className="col-md-6 col-lg-4 h-50">
-                            <div className="service p-3 border border m-2">
-                                <div className="service-img">
-                                    <img className="img-fluid" src={pd?.image} alt="" />
-                                </div>
-                                <h5>{pd.name}</h5>
-                                <p>{pd.description}</p>
-                                <p>price:{pd.price}</p>
-                                <Link to={`/services/${pd._id}`}>
-
-                                    <button className="btn btn-success">Order Now</button>
-                                </Link>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
+            <Row xs={1} md={3} className="g-4">
+                {services.map((pd, idx) => (
+                    <Col>
+                        <Card>
+                            <Card.Img className="w-70" variant="top" src={pd.image} />
+                            <Card.Body>
+                                <Card.Title>{pd.name}</Card.Title>
+                                <Card.Text>
+                                    {pd.description}
+                                </Card.Text>
+                                <Card.Text>
+                                    price: {pd.price}
+                                </Card.Text>
+                                <Link to={`/service/${pd._id}`}><button className="btn btn-success "> details</button></Link>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                ))}
+            </Row>
         </div>
     );
 };
