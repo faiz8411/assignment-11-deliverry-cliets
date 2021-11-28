@@ -17,22 +17,25 @@ const Services = () => {
     return (
         <div>
             <Row xs={1} md={3} className="g-4">
-                {services.map((pd, idx) => (
-                    <Col>
-                        <Card>
-                            <Card.Img className="w-70" variant="top" src={pd.image} />
-                            <Card.Body>
-                                <Card.Title>{pd.name}</Card.Title>
-                                <Card.Text>
-                                    {pd.description}
-                                </Card.Text>
-                                <Card.Text>
-                                    price: {pd.price}
-                                </Card.Text>
-                                <Link to={`/service/${pd._id}`}><button className="btn btn-success "> details</button></Link>
-                            </Card.Body>
-                        </Card>
-                    </Col>
+                {services.map((service, idx) => (
+                    <Service key={service._id}
+                        service={service}
+                    ></Service>
+                    // <Col>
+                    //     <Card>
+                    //         <Card.Img className="w-70" variant="top" src={pd.image} />
+                    //         <Card.Body>
+                    //             <Card.Title>{pd.name}</Card.Title>
+                    //             <Card.Text>
+                    //                 {pd.description}
+                    //             </Card.Text>
+                    //             <Card.Text>
+                    //                 price: {pd.price}
+                    //             </Card.Text>
+                    //             <Link to={`/service/${pd._id}`}><button className="btn btn-success "> details</button></Link>
+                    //         </Card.Body>
+                    //     </Card>
+                    // </Col>
                 ))}
             </Row>
         </div>
